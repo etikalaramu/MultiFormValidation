@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="styles.css">
+    <title>Template</title>
+
+</head>
+<body onload="GenerateCaptcha();">
+
+<form name="contactForm" onsubmit="return validateForm()">
+    <div>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+
+    </div>
+    <div id="nav">
+        <span>may25 signup</span>
+    </div>
+    <div id="thankyou">
+        <span>Thank You</span>
+    </div>
+    <div id="main">
+        <h4>Description</h4>
+            <div class="inputs">
+                <div>
+                  <label for="fname">First name <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input type="text" id="fname" name="fname" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s1"></span></div><br>
+            <div class="inputs">
+                <div>
+                  <label for="lname">Last name <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input type="text" id="lname" name="lname" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s2"></span></div><br>
+            <div class="inputs">
+                <div>
+                  <label for="email">Email <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input type="email" id="mail" name="mail" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s3"></span></div><br>
+            <div class="inputs">
+                <div>
+                  <label for="country">Country <span class="red">*</span></label>            
+                </div>
+                <div>
+                    <select name="country" id="country" style="width: 170px;" class="myInputs">
+                         <option value="selectcountry">Select Country</option>
+                         <option value="india">India</option>
+                         <option value="japan">Japan</option>
+                         <option value="usa">United States Of America</option>
+                         <option value="australia">Australia</option>
+                         <option value="newzealand">New Zealand</option>
+                    </select>
+                </div>
+            </div><div id="error"><span id="s4"></span></div><br>    
+            <div class="inputs">
+                <div>
+                    <label for="date">Date Of Birth <span class="red">*</span></label>
+                </div>
+                <div>
+                    <input type="text" id="date" name="date" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s5"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for="gender">Gender <span class="red">*</span></label>           
+                </div>
+                <div>
+                    <select name="gender" id="gender" style="width: 170px;" class="myInputs">
+                         <option value="selectgender">Select Gender</option>
+                         <option value="male">Male</option>
+                         <option value="female">Female</option>
+                         <option value="others">Others</option>
+                    </select>
+                </div>
+            </div><div id="error"><span id="s6"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for="phone">Phone Number <span class="red">*</span></label>
+                </div>
+                <div>
+                    <input type="text" id="phone" name="phone" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s7"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for="address">Address 1 <span class="red">*</span></label>
+                </div>
+                <div>
+                    <input type="text" id="address" name="address" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s8"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for="city">City <span class="red">*</span></label>
+                </div>
+                <div>
+                    <input type="text" id="city" name="city" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s9"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for="state">State/Province <span class="red">*</span></label>        
+                </div>
+                <div>
+                    <select name="state" id="state" style="width: 170px;" class="myInputs">
+                         <option value="selectstate">Select State</option>
+                         <option value="orissa">Orissa</option>
+                         <option value="karnataka">Karnataka</option>
+                         <option value="jharkhand">Jharkhand</option>
+                         <option value="kerala">Kerala</option>
+                         <option value="gujarat">Gujarat</option>
+                         <option value="telangana">Telangana</option>
+                    </select>
+                </div>
+            </div><div id="error"><span id="s10"></span></div><br>    
+            <div class="inputs">
+                <div>
+                    <label for="zip">Zip/Postal Code <span class="red">*</span></label>
+                </div>
+                <div>
+                    <input type="text" id="zip" name="zip" class="myInputs">
+                </div>
+            </div><div id="error"><span id="s11"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for=""></label>
+                </div>
+                <div>
+                  <input type="checkbox" id="updates" name="updates" class="myInputs">
+                  <label for="updates"> Get the latest news and updates from Angel's List now!</label>
+                  <br>
+                </div>
+            </div><div id="error"><span id="s12"></span></div><br>  
+            <div class="inputs">
+                <div>
+                  <label for="verify">Verification <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input type="text" id="txtCaptcha" style="text-align: center; border: none; font-weight: bold; font-family: Modern" />
+                </div>
+            </div><div id="error"><span id="s13"></span></div><br> 
+            <div class="inputs">
+                <div>
+                    <label for=""></label>
+                </div>
+                <div>
+                    <input type="button" id="btnrefresh" value="Refresh" onclick="GenerateCaptcha();" />
+                </div>
+            </div><div id="error"><span id="s14"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for=""></label>
+                </div>            
+                <div>
+                    <input type="text" id="txtCompare" />
+                </div>
+            </div><div id="error"><span id="s15"></span></div><br>
+            <div class="inputs">
+                <div>
+                    <label for=""></label>
+                </div>
+                <div>
+                    <span class="red">*</span>Required Fields
+                </div>           
+            </div><div id="error"><span id="s16"></span></div><br>
+            <div class="inputs">  
+                <div>
+                    <label for=""></label>
+                </div>
+                <div>
+                    <input id="btnValid" type="submit" value="Submit"/>
+                </div>      
+            </div>
+    
+        </tbody>
+      <!-- <input type="text" id="fname" name="fname" value="John"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <label for="email">Email:</label> -->
+      
+        </table>
+        </div>
+</form>
+<!-- <script>
+  var fname=document.getElementById("fname");
+  fname.onblur=function(){
+      if(fname.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s1").innerHTML="";
+        document.getElementById("s1").style.color="transparent";
+        return true
+      }
+  }
+  var lname=document.getElementById("lname");
+  lname.onblur=function(){
+      if(lname.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s2").innerHTML="";
+        document.getElementById("s2").style.color="transparent";
+        return true
+      }
+  }
+  var mail=document.getElementById("mail");
+  mail.onblur=function(){
+      if(mail.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s3").innerHTML="";
+        document.getElementById("s3").style.color="transparent";
+        return true
+      }
+  }
+  var country=document.getElementById("country");
+  country.onblur=function(){
+      if(country.value=="selectcountry"){
+          return false;
+      }
+      else{
+        document.getElementById("s4").innerHTML="";
+        document.getElementById("s4").style.color="transparent";
+        return true
+      }
+  }
+  var date=document.getElementById("date");
+  date.onblur=function(){
+      if(date.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s5").innerHTML="";
+        document.getElementById("s5").style.color="transparent";
+        return true
+      }
+  }
+  var gender=document.getElementById("gender");
+  gender.onblur=function(){
+      if(gender.value=="selectgender"){
+          return false;
+      }
+      else{
+        document.getElementById("s6").innerHTML="";
+        document.getElementById("s6").style.color="transparent";
+        return true
+      }
+  }
+  var phone=document.getElementById("phone");
+  phone.onblur=function(){
+      if(phone.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s7").innerHTML="";
+        document.getElementById("s7").style.color="transparent";
+        return true
+      }
+  }
+  var address=document.getElementById("address");
+  address.onblur=function(){
+      if(address.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s8").innerHTML="";
+        document.getElementById("s8").style.color="transparent";
+        return true
+      }
+  }
+  var city=document.getElementById("city");
+  city.onblur=function(){
+      if(city.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s9").innerHTML="";
+        document.getElementById("s9").style.color="transparent";
+        return true
+      }
+  }
+  var state=document.getElementById("state");
+  state.onblur=function(){
+      if(state.value=="selectstate"){
+          return false;
+      }
+      else{
+        document.getElementById("s10").innerHTML="";
+        document.getElementById("s10").style.color="transparent";
+        return true
+      }
+  }
+  var zip=document.getElementById("zip");
+  zip.onblur=function(){
+      if(zip.value==""){
+          return false;
+      }
+      else{
+        document.getElementById("s11").innerHTML="";
+        document.getElementById("s11").style.color="transparent";
+        return true
+      }
+  }
+  var updates=document.getElementById("updates");
+  updates.onblur=function(){
+      if(!updates.checked){
+          return false;
+      }
+      else{
+        document.getElementById("s12").innerHTML="";
+        document.getElementById("s12").style.color="transparent";
+        return true
+      }
+  }
+  var textCaptcha = document.getElementById('txtCaptcha').value;
+  var textCompare = document.getElementById('txtCompare').value;
+  textCompare.onblur=function(){
+      if(textCaptcha!=textCompare){
+          return false;
+      }
+      else{
+        document.getElementById("s15").innerHTML="";
+        document.getElementById("s15").style.color="transparent";
+        return true
+      }
+  }
+
+</script> -->
+<script>
+    function validateForm(){
+        var fname = document.contactForm.fname.value;
+        var lname = document.contactForm.lname.value;
+        var mail = document.contactForm.mail.value;
+        var country = document.contactForm.country.value;
+        var date = document.contactForm.date.value;
+        var gender = document.contactForm.gender.value;
+        var phone = document.contactForm.phone.value;
+        var address = document.contactForm.address.value;
+        var city = document.contactForm.city.value;
+        var state = document.contactForm.state.value;
+        var zip = document.contactForm.zip.value;
+        var updates = document.getElementById('updates')
+        var textCaptcha = document.getElementById('txtCaptcha').value;
+        var textCompare = document.getElementById('txtCompare').value;
+        if(fname=="" || lname=="" || mail=="" ||country=="selectcountry" || date=="" ||
+          gender=="selectgender" || phone=="" || address=="" || city=="" || state=="selectstate"
+          || zip=="" ||(!updates.checked) || (textCaptcha!=textCompare)){
+              alert("Please fill all details");
+              document.getElementById("s1").innerHTML="Please enter first name";
+              document.getElementById("s1").style.color="red";
+              document.getElementById("s2").innerHTML="Please enter last name";
+              document.getElementById("s2").style.color="red";
+              document.getElementById("s3").innerHTML="Please enter mail";
+              document.getElementById("s3").style.color="red";
+              document.getElementById("s4").innerHTML="Please select country";
+              document.getElementById("s4").style.color="red";
+              document.getElementById("s5").innerHTML="Please enter date";
+              document.getElementById("s5").style.color="red";
+              document.getElementById("s6").innerHTML="Please select gender";
+              document.getElementById("s6").style.color="red";
+              document.getElementById("s7").innerHTML="Please enter phone";
+              document.getElementById("s7").style.color="red";
+              document.getElementById("s8").innerHTML="Please enter address";
+              document.getElementById("s8").style.color="red";
+              document.getElementById("s9").innerHTML="Please select city";
+              document.getElementById("s9").style.color="red";
+              document.getElementById("s10").innerHTML="Please select state";
+              document.getElementById("s10").style.color="red";
+              document.getElementById("s11").innerHTML="Please enter zip";
+              document.getElementById("s11").style.color="red";
+              document.getElementById("s12").innerHTML="Please check checkbox";
+              document.getElementById("s12").style.color="red";
+              document.getElementById("s15").innerHTML="captha not matched";
+              document.getElementById("s15").style.color="red";
+            //   alert("captha not same or fill captha");
+               return false;
+          }
+        //  else if(textCaptcha!=textCompare){
+        //     alert("captha not same or fill captha");
+        //     return false;
+        // }
+          else{
+              document.getElementById("main").style.display="none";
+              document.getElementById("thankyou").style.display="block";
+              return false
+          }
+    }
+</script>
+<script type="text/javascript">
+    function GenerateCaptcha() {
+    var chr1 = Math.ceil(Math.random() * 9)+ '';
+    var chr2 = Math.ceil(Math.random() * 9)+ '';
+    var chr3 = Math.ceil(Math.random() * 9)+ '';
+    var chr4 = Math.ceil(Math.random() * 9)+ '';
+    var chr5 = Math.ceil(Math.random() * 9)+ '';
+    var chr6 = Math.ceil(Math.random() * 9)+ '';
+    var chr7 = Math.ceil(Math.random() * 9)+ '';
+     
+    var captchaCode = chr1 + ' ' + chr2 + ' ' + chr3 + ' ' + chr4 + ' ' + chr5 + ' '+ chr6 + ' ' + chr7;
+    document.getElementById("txtCaptcha").value = captchaCode
+    }
+
+    </script>
+    <script>
+         $( "#date" ).datepicker();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('bg-grunge-1.jpg');
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+}
+#error span{
+    font-size: 12px;
+    margin-left: 130px;
+    display: block;
+}
+#thankyou{
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    margin: 50px auto;
+    padding: 50px;
+    display: none;
+}
+h4{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+#nav{
+    background-color: brown;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+#nav span{
+    font-family: 'Open Sans', sans-serif;
+}
+#thankyou span{
+    font-family: 'Open Sans', sans-serif;
+}
+i{
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+i:nth-child(1){
+    margin-left: 10px;
+}
+#btnValid{
+    background-color: white;
+    color: brown;
+    font-weight: bolder;
+    padding: 10px 50px;
+    border: 2px solid silver;
+} 
+.red{
+    color: red;
+}
+select{
+    height: 24px;
+}
+.inputs div:nth-child(1){
+    width: 50%;
+    text-align: end;
+}
+.inputs div{
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+#main{
+    margin: auto;
+    width: 60%;
+    background-color: #0000003b;
+    height: auto;
+    margin-top: -20px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+form{
+    height: 100%;
+}
+@media only screen and (max-width:1000px){
+    #main{
+    margin: auto;
+    width: auto;
+    background-color: #0000003b;
+    height: auto;
+    margin-top: -20px;
+}  
+}
+@media only screen and (min-width:640px){
+    .inputs{
+     display:flex;
+     margin: 4px;
+    }
+    .inputs div:nth-child(1){
+        width: 50%;
+        text-align: end;
+    }
+    #main{
+     text-align: center;
+    }  
+    }
+    @media only screen and (max-width:639px){
+        .inputs{
+         display:inline-block;
+         margin: 4px;
+        }
+        #error span{
+            font-size: 12px;
+            margin-left: 0px;
+            display: block;
+        }
+        .inputs div:nth-child(1){
+            width: 100%;
+            text-align: start;
+        }
+        #main {
+            margin: auto;
+            width: auto;
+            background-color: #0000003b;
+            text-align: center;
+            height: auto;
+            margin-top: -20px;
+        }
+    }
